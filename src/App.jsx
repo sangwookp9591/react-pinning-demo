@@ -22,6 +22,9 @@ import { CollapsingToolbar } from './examples/CollapsingToolbar';
 import { FloatingActionButton } from './examples/FloatingActionButton';
 import { SnapScroll } from './examples/SnapScroll';
 import { VanillaExtractDemo } from './examples/VanillaExtractDemo';
+import { HybridSticky } from './examples/HybridSticky';
+import { HybridStickyRefactored } from './examples/HybridStickyRefactored';
+import { CollapsingToolbarRefactored } from './examples/CollapsingToolbarRefactored';
 import './App.css';
 
 function App() {
@@ -51,6 +54,9 @@ function App() {
     { id: 'fab', label: 'FAB', component: FloatingActionButton },
     { id: 'snap', label: 'Snap Scroll', component: SnapScroll },
     { id: 'vanilla', label: 'Vanilla Extract', component: VanillaExtractDemo },
+    { id: 'hybrid', label: 'Hybrid Sticky', component: HybridSticky },
+    { id: 'hybrid-refactored', label: 'Hybrid 공통화', component: HybridStickyRefactored },
+    { id: 'collapse-refactored', label: 'Collapse 공통화', component: CollapsingToolbarRefactored },
   ];
 
   const ActiveComponent = examples.find((ex) => ex.id === mode)?.component || SimpleSticky;
