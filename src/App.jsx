@@ -21,6 +21,7 @@ import { InstagramStory } from './examples/InstagramStory';
 import { CollapsingToolbar } from './examples/CollapsingToolbar';
 import { FloatingActionButton } from './examples/FloatingActionButton';
 import { SnapScroll } from './examples/SnapScroll';
+import { VanillaExtractDemo } from './examples/VanillaExtractDemo';
 import './App.css';
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
     { id: 'collapse', label: 'Collapsing Toolbar', component: CollapsingToolbar },
     { id: 'fab', label: 'FAB', component: FloatingActionButton },
     { id: 'snap', label: 'Snap Scroll', component: SnapScroll },
+    { id: 'vanilla', label: 'Vanilla Extract', component: VanillaExtractDemo },
   ];
 
   const ActiveComponent = examples.find((ex) => ex.id === mode)?.component || SimpleSticky;
