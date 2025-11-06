@@ -1,0 +1,335 @@
+.snap-scroll-container {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.snap-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 고정 네비게이션 도트 */
+.snap-nav {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+  backdrop-filter: blur(4px);
+}
+
+.nav-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.nav-dot.active {
+  background: white;
+  width: 16px;
+  height: 16px;
+}
+
+.dot-label {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  backdrop-filter: blur(10px);
+}
+
+.nav-dot:hover .dot-label {
+  opacity: 1;
+}
+
+/* 스크롤 진행 바 */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 1001;
+}
+
+.progress-fill-bar {
+  height: 100%;
+  background: white;
+  transition: width 0.1s ease-out;
+}
+
+/* 스냅 섹션 */
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.section-content {
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-emoji {
+  font-size: 120px;
+  margin-bottom: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.section-title {
+  margin: 0 0 16px 0;
+  font-size: 64px;
+  font-weight: bold;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section-subtitle {
+  margin: 0 0 40px 0;
+  font-size: 24px;
+  opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-number {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+/* 섹션별 상세 콘텐츠 */
+.section-details {
+  margin-top: 40px;
+}
+
+.section-details p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.feature-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  min-width: 140px;
+}
+
+.feature-icon {
+  font-size: 48px;
+}
+
+.code-preview {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.code-preview pre {
+  margin: 0;
+  color: #a8dadc;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.device-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.device-screen {
+  width: 300px;
+  height: 600px;
+  background: white;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.device-screen::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+}
+
+.device-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+.cta-button-snap {
+  padding: 16px 48px;
+  background: white;
+  color: #333;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button-snap:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button-snap:active {
+  transform: translateY(0);
+}
+
+/* 기술 설명 */
+.tech-info-snap {
+  background: white;
+  color: #333;
+  padding: 60px 40px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-info-snap h3 {
+  margin: 0 0 24px 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.tech-info-snap ul {
+  margin: 0;
+  padding-left: 24px;
+  color: #666;
+}
+
+.tech-info-snap li {
+  margin: 16px 0;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.tech-info-snap strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .snap-nav {
+    right: 16px;
+  }
+
+  .section-emoji {
+    font-size: 80px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+  }
+
+  .feature-list {
+    flex-direction: column;
+  }
+
+  .device-screen {
+    width: 240px;
+    height: 480px;
+  }
+
+  .device-content {
+    font-size: 60px;
+  }
+}
+
+/* 터치 최적화 */
+.nav-dot,
+.cta-button-snap {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}

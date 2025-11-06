@@ -17,6 +17,10 @@ import { PullToRefresh } from './examples/PullToRefresh';
 import { BottomSheet } from './examples/BottomSheet';
 import { SwipeableCards } from './examples/SwipeableCards';
 import { NativeTabBar } from './examples/NativeTabBar';
+import { InstagramStory } from './examples/InstagramStory';
+import { CollapsingToolbar } from './examples/CollapsingToolbar';
+import { FloatingActionButton } from './examples/FloatingActionButton';
+import { SnapScroll } from './examples/SnapScroll';
 import './App.css';
 
 function App() {
@@ -41,6 +45,10 @@ function App() {
     { id: 'bottomsheet', label: 'Bottom Sheet', component: BottomSheet },
     { id: 'swipe', label: 'Swipe Cards', component: SwipeableCards },
     { id: 'nativetab', label: 'Native 탭', component: NativeTabBar },
+    { id: 'instagram', label: 'Instagram Story', component: InstagramStory },
+    { id: 'collapse', label: 'Collapsing Toolbar', component: CollapsingToolbar },
+    { id: 'fab', label: 'FAB', component: FloatingActionButton },
+    { id: 'snap', label: 'Snap Scroll', component: SnapScroll },
   ];
 
   const ActiveComponent = examples.find((ex) => ex.id === mode)?.component || SimpleSticky;
