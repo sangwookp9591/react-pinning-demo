@@ -1,0 +1,284 @@
+.sticky-tabs-demo-container {
+  height: 100%;
+  overflow-y: auto;
+  background: #f5f5f5;
+  -webkit-overflow-scrolling: touch;
+}
+
+.demo-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60px 32px;
+  text-align: center;
+}
+
+.demo-header h1 {
+  margin: 0 0 12px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.demo-header p {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.demo-section {
+  padding: 24px 16px;
+  border-bottom: 8px solid #e5e5e5;
+}
+
+.demo-section h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.demo-description {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.demo-content {
+  padding: 24px 0;
+}
+
+.demo-content h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+/* 카드 그리드 */
+.demo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.demo-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.demo-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 12px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.demo-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-price {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+/* 피드 스타일 */
+.demo-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feed-item {
+  display: flex;
+  gap: 16px;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.feed-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.feed-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.feed-content p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.feed-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #999;
+}
+
+/* 리스트 스타일 */
+.demo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list-item {
+  display: flex;
+  gap: 16px;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.list-item:active {
+  transform: scale(0.98);
+}
+
+.list-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.list-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.list-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.list-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* Dark 모드 */
+.dark-section {
+  background: #1a1a1a;
+  color: white;
+}
+
+.dark-section h2 {
+  color: white;
+}
+
+.dark-section .demo-description {
+  color: #999;
+}
+
+.dark-content {
+  color: white;
+}
+
+.dark-card {
+  background: #2a2a2a;
+  border: 1px solid #333;
+}
+
+/* 기술 설명 */
+.tech-info {
+  background: white;
+  padding: 32px 24px;
+  margin: 32px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tech-info h3 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.tech-info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #666;
+}
+
+.tech-info li {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.tech-info strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .demo-header h1 {
+    font-size: 28px;
+  }
+
+  .demo-cards {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .card-image {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+}

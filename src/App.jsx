@@ -25,6 +25,8 @@ import { VanillaExtractDemo } from './examples/VanillaExtractDemo';
 import { HybridSticky } from './examples/HybridSticky';
 import { HybridStickyRefactored } from './examples/HybridStickyRefactored';
 import { CollapsingToolbarRefactored } from './examples/CollapsingToolbarRefactored';
+import { StickyTabsDemo } from './examples/StickyTabsDemo';
+import { ScrollSyncTabsDemo } from './examples/ScrollSyncTabsDemo';
 import './App.css';
 
 function App() {
@@ -57,6 +59,8 @@ function App() {
     { id: 'hybrid', label: 'Hybrid Sticky', component: HybridSticky },
     { id: 'hybrid-refactored', label: 'Hybrid 공통화', component: HybridStickyRefactored },
     { id: 'collapse-refactored', label: 'Collapse 공통화', component: CollapsingToolbarRefactored },
+    { id: 'sticky-tabs-demo', label: 'StickyTabs 공통화', component: StickyTabsDemo },
+    { id: 'scroll-sync-tabs', label: 'ScrollSync 공통화', component: ScrollSyncTabsDemo },
   ];
 
   const ActiveComponent = examples.find((ex) => ex.id === mode)?.component || SimpleSticky;
