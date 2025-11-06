@@ -1,0 +1,177 @@
+.ptr-container {
+  height: 100%;
+  overflow-y: auto;
+  background: #f5f5f5;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Pull to Refresh 인디케이터 */
+.ptr-indicator {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.ptr-spinner {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s ease-out;
+}
+
+.ptr-spinner.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.ptr-text {
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+  background: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+/* 컨텐츠 */
+.ptr-content {
+  min-height: 100vh;
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform;
+}
+
+.ptr-header {
+  background: white;
+  padding: 32px 24px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.ptr-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.ptr-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.ptr-feed {
+  padding: 0 0 80px 0;
+}
+
+.feed-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.feed-item:active {
+  background: #f9f9f9;
+}
+
+.feed-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.feed-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.feed-content p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.feed-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.ptr-info {
+  background: #fff3cd;
+  padding: 24px;
+  margin: 0;
+  border-top: 2px solid #ffc107;
+}
+
+.ptr-info p {
+  margin: 0 0 16px 0;
+  font-weight: 600;
+  color: #856404;
+}
+
+.ptr-info ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #856404;
+}
+
+.ptr-info li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .ptr-header h1 {
+    font-size: 24px;
+  }
+
+  .feed-item {
+    padding: 12px 16px;
+  }
+}
+
+/* 터치 피드백 개선 */
+.ptr-container * {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}

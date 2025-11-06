@@ -1,0 +1,187 @@
+.stacked-container {
+  height: 100%;
+  overflow-y: auto;
+  background: #f5f5f5;
+}
+
+/* 헤더 1: 항상 최상단에 고정 */
+.header-1 {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-1 h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* 스페이서 섹션 */
+.spacer-section {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.spacer-section h3 {
+  font-size: 32px;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.spacer-section p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+/* 헤더 2: 헤더 1 아래 50px에 고정 */
+.header-2 {
+  position: sticky;
+  top: 50px; /* 헤더 1 아래 */
+  z-index: 30;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-2 h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* 중간 컨텐츠 */
+.content-section {
+  padding: 40px 24px;
+  background: white;
+}
+
+.content-section h3 {
+  font-size: 28px;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.content-section p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin: 12px 0;
+}
+
+/* 헤더 3: 헤더 2 아래 50px에 고정 (헤더 1로부터는 100px) */
+.header-3 {
+  position: sticky;
+  top: 100px; /* 헤더 1(50px) + 헤더 2(50px) */
+  z-index: 20;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-3 h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* 메인 컨텐츠 */
+.main-content {
+  padding: 40px 24px;
+  background: #fafafa;
+}
+
+.main-content h3 {
+  font-size: 28px;
+  margin: 0 0 24px 0;
+  color: #333;
+}
+
+.content-card {
+  background: white;
+  padding: 24px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.content-card h4 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.content-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 추가 스페이서 */
+.extra-spacer {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.extra-spacer h3 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+/* 헤더 4: 헤더 3 아래 50px에 고정 (헤더 1로부터는 150px) */
+.header-4 {
+  position: sticky;
+  top: 150px; /* 헤더 1(50px) + 헤더 2(50px) + 헤더 3(50px) */
+  z-index: 10;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-4 h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* 최종 컨텐츠 */
+.final-content {
+  padding: 40px 24px;
+  background: white;
+}
+
+.final-content p {
+  padding: 16px;
+  margin: 12px 0;
+  background: #f9fafb;
+  border-left: 4px solid #43e97b;
+  border-radius: 4px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 시각적 가이드 - 고정된 헤더들의 경계 표시 */
+.header-1::after,
+.header-2::after,
+.header-3::after,
+.header-4::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,96 @@
+.toss-container {
+  height: 100%;
+  overflow-y: auto;
+  background: #f9fafb;
+}
+
+.toss-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.toss-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #3182f6;
+}
+
+.toss-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.toss-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.toss-menu a:hover {
+  color: #3182f6;
+}
+
+.toss-hero {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3182f6 0%, #1e40af 100%);
+  color: white;
+}
+
+.toss-hero h1 {
+  font-size: 56px;
+  margin: 0 0 16px 0;
+}
+
+.toss-hero p {
+  font-size: 24px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.toss-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h2 {
+  margin: 0 0 12px 0;
+  font-size: 32px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+}

@@ -1,0 +1,135 @@
+.pricing-container {
+  height: 100%;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 24px;
+}
+
+.pricing-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 48px;
+}
+
+.pricing-header h1 {
+  font-size: 48px;
+  margin: 0 0 16px 0;
+}
+
+.pricing-header p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.table-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-header th {
+  padding: 32px 24px;
+  text-align: center;
+  vertical-align: top;
+  background: white;
+}
+
+.feature-col {
+  text-align: left !important;
+  font-weight: 600;
+  color: #333;
+}
+
+.popular {
+  background: #f0f9ff !important;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #3b82f6;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.plan-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.plan-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3b82f6;
+  margin-bottom: 16px;
+}
+
+.select-btn {
+  padding: 12px 32px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.select-btn:hover {
+  transform: translateY(-2px);
+}
+
+tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+.feature-name {
+  padding: 20px 24px;
+  font-weight: 500;
+  color: #444;
+  text-align: left;
+}
+
+.feature-value {
+  padding: 20px 24px;
+  text-align: center;
+  color: #666;
+}
+
+.feature-value:has-text('✓') {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.feature-value:has-text('✗') {
+  color: #ef4444;
+}
